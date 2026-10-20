@@ -1,0 +1,48 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1015 >>
+stream
+BT /F2 20 Tf 56 760 Td (Statistics formula sheet) Tj ET
+BT /F1 9 Tf 56 726 Td (Northfield Institute - demo learning resource for the Lectern LMS template) Tj ET
+BT /F2 13 Tf 56 688 Td (Describing data) Tj ET
+BT /F1 11 Tf 56 668 Td (Mean = sum\(x\) / n        Median = middle value when sorted) Tj ET
+BT /F1 11 Tf 56 651 Td (Variance s^2 = sum\(\(x - mean\)^2\) / \(n - 1\)      SD = sqrt\(variance\)) Tj ET
+BT /F2 13 Tf 56 626 Td (Probability) Tj ET
+BT /F1 11 Tf 56 606 Td (P\(A or B\) = P\(A\) + P\(B\) - P\(A and B\)) Tj ET
+BT /F1 11 Tf 56 589 Td (P\(A and B\) = P\(A\) x P\(B\)   \(independent events\)) Tj ET
+BT /F2 13 Tf 56 564 Td (Normal distribution) Tj ET
+BT /F1 11 Tf 56 544 Td (z = \(x - mean\) / SD      68% within 1 SD, 95% within 2, 99.7% within 3) Tj ET
+BT /F2 13 Tf 56 519 Td (Inference) Tj ET
+BT /F1 11 Tf 56 499 Td (95% CI for a mean: mean +/- 1.96 x SD / sqrt\(n\)   \(large samples\)) Tj ET
+BT /F1 11 Tf 56 482 Td (Two-proportion z test: z = \(p1 - p2\) / sqrt\(p\(1 - p\)\(1/n1 + 1/n2\)\)) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001318 00000 n 
+0000001388 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1463
+%%EOF

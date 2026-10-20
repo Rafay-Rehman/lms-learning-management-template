@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lectern — a learning management system template with student, instructor and admin experiences." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Northfield Institute — Learning</title>
+    <script>
+      // Paint the saved theme before React loads, so there's no flash of the default colors.
+      try {
+        var p = JSON.parse(localStorage.getItem('lectern:paint') || 'null')
+        var prefs = JSON.parse(localStorage.getItem('lectern:prefs') || '{}')
+        if (p && p.vars) {
+          var dark = prefs.mode ? prefs.mode === 'dark' : p.dark
+          if (dark === p.dark) for (var k in p.vars) document.documentElement.style.setProperty(k, p.vars[k])
+          if (dark) document.documentElement.classList.add('dark')
+          document.documentElement.dataset.header = p.header
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

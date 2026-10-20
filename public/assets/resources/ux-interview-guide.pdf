@@ -1,0 +1,49 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1071 >>
+stream
+BT /F2 20 Tf 56 760 Td (Interview discussion guide template) Tj ET
+BT /F1 9 Tf 56 726 Td (Northfield Institute - demo learning resource for the Lectern LMS template) Tj ET
+BT /F2 13 Tf 56 688 Td (Research goals) Tj ET
+BT /F1 11 Tf 56 668 Td (What decisions will this research inform? List two or three.) Tj ET
+BT /F2 13 Tf 56 643 Td (Warm-up \(5 minutes\)) Tj ET
+BT /F1 11 Tf 56 623 Td (Tell me a little about your role and a typical week.) Tj ET
+BT /F2 13 Tf 56 598 Td (Core questions \(20 minutes\)) Tj ET
+BT /F1 11 Tf 56 578 Td (Tell me about the last time you ... \(ask about past behaviour, not opinions\)) Tj ET
+BT /F1 11 Tf 56 561 Td (What happened next? How did you decide? What was frustrating?) Tj ET
+BT /F2 13 Tf 56 536 Td (Follow-up prompts) Tj ET
+BT /F1 11 Tf 56 516 Td (Can you show me? Why was that important? What did you expect?) Tj ET
+BT /F2 13 Tf 56 491 Td (Wrap-up \(5 minutes\)) Tj ET
+BT /F1 11 Tf 56 471 Td (Is there anything I should have asked but did not?) Tj ET
+BT /F1 11 Tf 56 454 Td (Thank the participant and explain what happens next.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001374 00000 n 
+0000001444 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1519
+%%EOF

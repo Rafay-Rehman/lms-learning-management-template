@@ -1,0 +1,47 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1007 >>
+stream
+BT /F2 20 Tf 56 760 Td (Worksheet: cleaning the energy data set) Tj ET
+BT /F1 9 Tf 56 726 Td (Northfield Institute - demo learning resource for the Lectern LMS template) Tj ET
+BT /F2 13 Tf 56 688 Td (Your task) Tj ET
+BT /F1 11 Tf 56 668 Td (Load household-energy.csv and produce a tidy table of daily usage per household.) Tj ET
+BT /F2 13 Tf 56 643 Td (Steps) Tj ET
+BT /F1 11 Tf 56 623 Td (1. Check shape, types and missing values. Write down what you find.) Tj ET
+BT /F1 11 Tf 56 606 Td (2. Readings are in kWh, but some rows use Wh. Find and convert them.) Tj ET
+BT /F1 11 Tf 56 589 Td (3. Remove duplicate meter readings \(same household and timestamp\).) Tj ET
+BT /F1 11 Tf 56 572 Td (4. Decide how to handle gaps: drop, fill or flag. Justify your choice.) Tj ET
+BT /F1 11 Tf 56 555 Td (5. Melt the 24 hourly columns into a long table, then sum per day.) Tj ET
+BT /F2 13 Tf 56 530 Td (Hand in) Tj ET
+BT /F1 11 Tf 56 510 Td (Your notebook and three sentences on the biggest data problem you fixed.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001310 00000 n 
+0000001380 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1455
+%%EOF

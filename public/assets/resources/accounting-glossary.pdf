@@ -1,0 +1,46 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1031 >>
+stream
+BT /F2 20 Tf 56 760 Td (Accounting terms glossary) Tj ET
+BT /F1 9 Tf 56 726 Td (Northfield Institute - demo learning resource for the Lectern LMS template) Tj ET
+BT /F1 11 Tf 56 696 Td (Asset - something the business owns or controls that has future value.) Tj ET
+BT /F1 11 Tf 56 679 Td (Liability - an amount the business owes to someone else.) Tj ET
+BT /F1 11 Tf 56 662 Td (Equity - assets minus liabilities; the owners' claim on the business.) Tj ET
+BT /F1 11 Tf 56 645 Td (Revenue - income earned from selling goods or services.) Tj ET
+BT /F1 11 Tf 56 628 Td (Expense - a cost incurred to earn revenue.) Tj ET
+BT /F1 11 Tf 56 611 Td (Accrual - recording revenue or expense when earned or incurred, not when paid.) Tj ET
+BT /F1 11 Tf 56 594 Td (Depreciation - spreading the cost of a long-lived asset over its useful life.) Tj ET
+BT /F1 11 Tf 56 577 Td (Debit / credit - the two sides of every double-entry transaction.) Tj ET
+BT /F1 11 Tf 56 560 Td (Cash flow - the actual movement of money into and out of the business.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000001334 00000 n 
+0000001404 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1479
+%%EOF

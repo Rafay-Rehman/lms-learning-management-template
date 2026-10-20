@@ -1,0 +1,192 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/instrument-sans';
+@import '@fontsource-variable/literata';
+@import '@fontsource-variable/atkinson-hyperlegible-next';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Design tokens.
+
+  The base tokens (--bg, --surface, --ink, --primary …) are written onto
+  <html> at runtime by the theme provider from the saved Theme
+  (src/services/theme.ts), so the Theme & Branding page can change them
+  live. The values below are the default "Modern Indigo" preset and only
+  matter for the very first paint.
+
+  Everything else here is derived from those base tokens with color-mix(),
+  so a custom palette always produces coherent hover, soft and faint shades.
+*/
+:root {
+  --bg: #f5f5fa;
+  --surface: #ffffff;
+  --ink: #1a1c32;
+  --muted: #585c76;
+  --line: #e1e1ec;
+  --primary: #3d41d6;
+  --primary-ink: #ffffff;
+  --secondary: #0d7f89;
+  --secondary-ink: #ffffff;
+  --highlight: #c9790f;
+  --link: #3236c2;
+  --success: #22804f;
+  --warning: #a86a0c;
+  --danger: #c43c2c;
+  --nav: #16193b;
+  --nav-ink: #c5c8e6;
+  --nav-strong: #ffffff;
+  --nav-line: transparent;
+  --nav-hover: rgb(255 255 255 / 0.06);
+  --nav-active: rgb(255 255 255 / 0.11);
+  --radius: 14px;
+  --r-ctl: 10px;
+  --r-btn: 10px;
+  --font-body: 'Instrument Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Literata Variable', ui-serif, Georgia, serif;
+  --content-max: 1520px;
+  --shadow-sm: 0 1px 2px rgb(10 12 30 / 0.06);
+  --shadow-md: 0 1px 2px rgb(10 12 30 / 0.06), 0 6px 14px -8px rgb(10 12 30 / 0.11);
+  --shadow-lg: 0 2px 6px rgb(10 12 30 / 0.06), 0 24px 56px -18px rgb(10 12 30 / 0.28);
+  --card-border: var(--line);
+  --card-shadow: var(--shadow-sm);
+  color-scheme: light;
+  font-size: 15px;
+}
+
+/* Derived tokens. Also declared on .theme-scope so a preview panel that
+   overrides the base tokens gets matching derived shades. */
+:root, .theme-scope {
+  --surface-2: color-mix(in oklab, var(--surface) 55%, var(--bg));
+  --surface-3: color-mix(in oklab, var(--line) 55%, var(--surface));
+  --line-strong: color-mix(in oklab, var(--line) 80%, var(--ink));
+  --faint: color-mix(in oklab, var(--muted) 80%, var(--surface));
+  --primary-strong: color-mix(in oklab, var(--primary) 84%, var(--ink));
+  --primary-soft: color-mix(in oklab, var(--primary) 11%, var(--surface));
+  --info: var(--secondary);
+  --glass: color-mix(in oklab, var(--surface) 84%, transparent);
+
+  /* Categorical chart series. Fixed order, validated for colour-blind separation. */
+  --series-1: var(--primary);
+  --series-2: #1a8a7a;
+  --series-3: #e0682f;
+  --series-4: #b04d9a;
+  --series-5: #d19a1a;
+  --series-6: #4f86c6;
+  --series-7: #7a8b2a;
+}
+
+.dark, .dark .theme-scope:not(.light), .theme-scope.dark {
+  --series-2: #2fb3a0;
+  --series-3: #ee8550;
+  --series-4: #d17cc0;
+  --series-5: #e0b040;
+  --series-6: #7aaee8;
+  --series-7: #a0b44a;
+  --primary-soft: color-mix(in oklab, var(--primary) 16%, var(--surface));
+  --surface-3: color-mix(in oklab, var(--line) 70%, var(--surface));
+}
+
+@theme inline {
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-nav: var(--nav);
+  --color-nav-ink: var(--nav-ink);
+  --color-nav-strong: var(--nav-strong);
+  --color-primary: var(--primary);
+  --color-primary-ink: var(--primary-ink);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-ink: var(--secondary-ink);
+  --color-highlight: var(--highlight);
+  --color-link: var(--link);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  --animate-pop: pop 160ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  --animate-fade: fade 160ms ease-out;
+  --animate-slide: slide 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-rise: rise 420ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes pop { from { opacity: 0; transform: translateY(4px) scale(0.98); } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes slide { from { transform: translateX(24px); opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -0.01em; text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; border-radius: 6px; }
+  ::selection { background: color-mix(in oklab, var(--primary) 26%, transparent); }
+  button, [role='button'] { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  .dark input[type='date']::-webkit-calendar-picker-indicator { filter: invert(1); }
+}
+
+@layer components {
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+  }
+  .glass {
+    background: var(--glass);
+    backdrop-filter: blur(18px) saturate(1.4);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  }
+  [data-header='solid'] .glass-header { background: var(--surface); backdrop-filter: none; }
+  /* Anchor absolutely positioned children (e.g. sr-only labels) so they can't widen the page. */
+  .overflow-x-auto, .overflow-y-auto, .overflow-auto, .overflow-hidden { position: relative; }
+  .tabular { font-variant-numeric: tabular-nums; }
+  .numeral { font-family: var(--font-heading); font-variant-numeric: lining-nums tabular-nums; letter-spacing: -0.02em; }
+  .scroll-thin { scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent; }
+  .link { color: var(--link); text-underline-offset: 3px; }
+  .link:hover { text-decoration: underline; }
+  /* Long-form lesson text. */
+  .prose-lesson { font-size: 1.04rem; line-height: 1.75; max-width: 68ch; }
+  .prose-lesson p + p, .prose-lesson ul + p, .prose-lesson p + ul { margin-top: 1em; }
+  .prose-lesson h2 { font-size: 1.3rem; font-weight: 600; margin: 1.6em 0 0.5em; }
+  .prose-lesson ul { list-style: disc; padding-left: 1.3em; }
+  .prose-lesson li + li { margin-top: 0.35em; }
+  .prose-lesson code { font-size: 0.9em; padding: 0.1em 0.35em; border-radius: 5px; background: var(--surface-3); }
+}
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  main { padding: 0 !important; max-width: none !important; }
+  .panel { box-shadow: none; }
+}
+
+[data-motion='reduced'] *, [data-motion='reduced'] *::before, [data-motion='reduced'] *::after {
+  animation-duration: 1ms !important;
+  transition-duration: 1ms !important;
+  scroll-behavior: auto !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; scroll-behavior: auto !important; }
+}
