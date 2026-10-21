@@ -1,0 +1,17 @@
+Copyright (c) 2026 the template author. All rights reserved.
+
+This template's source code is proprietary. No license to use, copy, modify,
+or redistribute it is granted except by written permission of the copyright
+holder or under the terms of the marketplace license under which you obtained
+it (for example, a ThemeForest Regular or Extended License).
+
+All people, courses, enrollments, grades and certificates in this project are
+fictional. "Northfield Institute" and "Lectern" are fictional names; the
+bundled logo, generated course art and demo PDFs were created for this template.
+
+Third-party components keep their own licenses:
+
+- React, React DOM, React Router, Vite, Tailwind CSS, Playwright: MIT
+- lucide-react icons: ISC
+- TypeScript: Apache-2.0
+- Instrument Sans, Literata and Atkinson Hyperlegible Next fonts (via Fontsource): SIL Open Font License 1.1

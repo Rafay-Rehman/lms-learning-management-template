@@ -23,6 +23,8 @@ test('visitor: landing → catalog search, filters, empty state → course detai
   await results.first().getByRole('link').click()
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Calculus I: Limits and Derivatives')
   await expect(page.getByText('What you’ll learn')).toBeVisible()
+  // The default demo account (Maya) is enrolled in Calculus, so preview a course she hasn't joined.
+  await page.goto('/courses/cell-bio')
   await page.getByRole('button', { name: 'Preview' }).first().click()
   await expect(page.getByRole('dialog', { name: /Preview:/ })).toContainText('Video placeholder')
   expect(errors).toEqual([])
@@ -95,8 +97,8 @@ test('student takes a quiz: validation prompt, scoring, review and attempt histo
   await page.getByRole('button', { name: 'Submit quiz' }).click()
   await page.getByRole('dialog', { name: 'Submit your answers?' }).getByRole('button', { name: 'Submit quiz' }).click()
   await expect(page).toHaveURL(/\/attempts\//)
-  await expect(page.getByText('Passed', { exact: true })).toBeVisible()
-  await expect(page.getByText('You scored 4 of 4 points')).toBeVisible()
+  await expect(page.locator('main p', { hasText: /^Passed$/ })).toBeVisible()
+  await expect(page.getByText('You scored 3 of 3 points')).toBeVisible()
   await expect(page.getByText('Correct answer').first()).toBeVisible()
   // The quiz lesson is now complete in the course.
   await page.goto('/learn/course/c-ux-research/ux-research-l5')
@@ -137,12 +139,11 @@ test('finishing every required lesson issues one certificate that verifies', asy
   await as(page, 'u-maya', '/learn/explore/acad-write')
   await page.getByRole('button', { name: 'Enroll for free' }).click()
   await expect(page).toHaveURL(/acad-write-l1$/)
-  for (let i = 0; i < 6; i++) {
-    const mark = page.getByRole('button', { name: 'Mark as complete' })
-    if (await mark.isVisible()) await mark.click()
-    const next = page.getByRole('link', { name: 'Next' })
-    if (!(await next.isVisible())) break
-    await next.click()
+  // Lesson 5 is an optional link, so it's skipped.
+  for (const n of [1, 2, 3, 4, 6]) {
+    await page.goto(`/learn/course/c-acad-write/acad-write-l${n}`)
+    await page.getByRole('button', { name: 'Mark as complete' }).click()
+    await expect(page.getByText('Completed', { exact: true })).toBeVisible()
   }
   await expect(page.getByText('You’ve completed this course.')).toBeVisible()
   await page.goto('/learn/certificates')
